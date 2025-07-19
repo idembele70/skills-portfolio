@@ -61,7 +61,7 @@ table {
 }
 
 :root {
-  --blue-deep: #1769aa;
+  --blue-deep: #093170;
   --blue-primary: #2196f3;
   --blue-light: #4dabf5;
 }
@@ -100,7 +100,7 @@ aside img {
   margin-bottom: 64px;
 }
 
-article h2 {
+.sidebar h5 {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -125,4 +125,84 @@ article.mission-reference .list-item > span {
 
 div.container {
   width: 80%;
+}
+
+.container.page-1 {
+  margin-top: 120px;
+}
+.container .title {
+  text-align: center;
+}
+
+.container.page-1 h1 {
+  font-size: 26pt;
+  color: var(--blue-deep);
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.container.page-1 h2 {
+  font-size: 16pt;
+  color: var(--blue-primary);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.container.page-1 h3 {
+  font-size: 16pt;
+  color: var(--blue-primary);
+  margin-bottom: 32px;
+}
+
+.container.page-1 > div {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+.container.page-1 h4 {
+  font-size: 13pt;
+  font-weight: bold;
+  background-color: var(--blue-deep);
+  border-radius: 32px;
+  width: 65%;
+  padding: 8px 32px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.technical-skills article {
+  margin-bottom: 16px;
+}
+
+.technical-skills h5, .schools h5, .languages h5 {
+  font-size: 10pt;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-right: 16px;
+  text-transform: uppercase;
+  min-width: 72px;
+}
+
+.technical-skills ul {
+  display: flex;
+}
+
+.functional-skills ul, .schools ul, .languages ul {
+  padding-left: 16px;
+  list-style-type: square;
+}
+
+.functional-skills li, .schools li{
+ margin-bottom: 8px;
+}
+
+.schools h5, .languages h5 {
+  float: left;
+}
+
+.schools li p {
+  float: left;
+}
+
+.languages li {
+margin-bottom: 8px;
 }
