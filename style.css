@@ -67,16 +67,19 @@ table {
 }
 
 section {
-  break-after: always;
   width: 210mm;
   height: 297mm;
   margin: 0 auto;
-
   display: flex;
+  page-break-after: always;
 }
 
 section:last-child {
   break-after: auto;
+}
+div.container {
+  width: 80%;
+  height: 100%;
 }
 
 .sidebar {
@@ -123,13 +126,15 @@ article.mission-reference .list-item > span {
   font-weight: normal;
 }
 
-div.container {
-  width: 80%;
-}
 
 .container.page-1 {
   margin-top: 120px;
 }
+
+hr {
+  border: 1px solid var(--blue-light);
+}
+
 .container .title {
   text-align: center;
 }
@@ -205,4 +210,54 @@ div.container {
 
 .languages li {
 margin-bottom: 8px;
+}
+
+.page-2 h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  display: inline-block;
+}
+.page-2 h3:not(:last-child) {
+  margin-right: 32px;
+}
+
+.page-2 article {
+  margin-bottom: 32px;
+}
+
+.page-2 p {
+  margin-left: 16px;
+}
+
+.page-2 ul {
+  margin-left: 32px;
+  list-style-type: square;
+  margin-top: 8px;
+}
+
+.page-2 li {
+  margin-bottom: 8px;
+}
+
+.page-2 li::marker {
+  color: var(--blue-primary);
+}
+
+.page-2 h4 {
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+.page-2 h5 {
+  color: var(--blue-deep);
+  margin-bottom: 8px;
+  margin-left: 16px;
+  font-weight: bold;
+}
+
+.page-2 .technical-environment {
+  color: var(--blue-light);
+  margin-bottom: 4px;
 }
