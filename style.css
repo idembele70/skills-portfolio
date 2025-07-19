@@ -74,7 +74,7 @@ section {
   page-break-after: always;
 }
 
-section:last-child {
+section:last-of-type {
   break-after: auto;
 }
 div.container {
@@ -212,26 +212,26 @@ hr {
 margin-bottom: 8px;
 }
 
-.page-2 h3 {
+.page-2 h3, .page-3 h3 {
   font-size: 12pt;
   font-weight: bold;
   margin-bottom: 16px;
   margin-left: 16px;
   display: inline-block;
 }
-.page-2 h3:not(:last-child) {
+.page-2 h3:not(:last-of-type), .page-3 h3:not(:last-of-type) {
   margin-right: 32px;
 }
 
-.page-2 article {
+.page-2 article, .page-3 article {
   margin-bottom: 32px;
 }
 
-.page-2 p {
+.page-2 p, .page-3 p {
   margin-left: 16px;
 }
 
-.page-2 ul {
+.page-2 ul, .page-3 ul {
   margin-left: 32px;
   list-style-type: square;
   margin-top: 8px;
@@ -241,23 +241,46 @@ margin-bottom: 8px;
   margin-bottom: 8px;
 }
 
-.page-2 li::marker {
+.page-2 li::marker, .page-3 li::marker {
   color: var(--blue-primary);
 }
 
-.page-2 h4 {
+.page-2 h4, .page-3 h4 {
   font-weight: bold;
   margin-left: 16px;
 }
 
-.page-2 h5 {
+.page-2 h5, .page-3 h5 {
   color: var(--blue-deep);
   margin-bottom: 8px;
   margin-left: 16px;
   font-weight: bold;
 }
 
-.page-2 .technical-environment {
+.page-2 .technical-environment, .page-3 .technical-environment {
   color: var(--blue-light);
   margin-bottom: 4px;
+}
+
+.page-3 li {
+  margin-bottom: 8px;
+}
+
+.page-3 .list-item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+}
+.page-3 h6 {
+  margin-right: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+img.github {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
 }
