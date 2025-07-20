@@ -307,3 +307,10 @@ margin-bottom: 8px;
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.hidden-section {
+  opacity: 0;
+  user-select: none;
+  z-index: -1000;
+  color: transparent;
+}
