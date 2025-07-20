@@ -133,6 +133,7 @@ article.mission-reference .list-item > span {
 
 hr {
   border: 1px solid var(--blue-light);
+  margin-top: 0;
 }
 
 .container .title {
@@ -152,13 +153,33 @@ hr {
   font-weight: bold;
   margin-bottom: 8px;
 }
+
 .container.page-1 h3 {
   font-size: 16pt;
   color: var(--blue-primary);
+  margin-bottom: 4px;
+}
+
+.container.page-1 h3:last-of-type {
+  margin-bottom: 16px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 32px;
 }
 
-.container.page-1 > div {
+img.github, .linkedin, .email, .call  {
+  width: 34px;
+  height: 34px;
+}
+.logo-container > a:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.container.page-1 > div:not(.logo-container) {
   margin-left: 16px;
   margin-bottom: 16px;
 }
@@ -189,6 +210,7 @@ hr {
 
 .technical-skills ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .functional-skills ul, .schools ul, .languages ul {
@@ -241,7 +263,7 @@ margin-bottom: 8px;
   margin-bottom: 8px;
 }
 
-.page-2 li::marker, .page-3 li::marker {
+.page-1 li::marker, .page-2 li::marker, .page-3 li::marker {
   color: var(--blue-primary);
 }
 
@@ -274,13 +296,14 @@ margin-bottom: 8px;
 .image-container {
   display: flex;
 }
+
+.github-small {
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
 .page-3 h6 {
   margin-right: 8px;
   font-weight: bold;
   text-transform: uppercase;
-}
-img.github {
-  width: 24px;
-  height: 24px;
-  margin-right: 4px;
 }
