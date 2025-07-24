@@ -100,14 +100,13 @@ aside img {
 }
 
 .sidebar article {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .sidebar h5 {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-
 
 article .list-item {
 margin-bottom: 4px;
@@ -117,18 +116,23 @@ article.mission-reference .list-item {
   display: flex;
 }
 
-article.mission-reference .list-item > * {
-  width: 50%;
+article.mission-reference .list-item > .date {
+  flex: 0 0 58px;
+  margin-right: 5px;
 }
 
-article.mission-reference .list-item > span {
+article.mission-reference .list-item > span, article.languages .list-item > span {
   font-style: normal;
   font-weight: normal;
 }
 
+.sidebar .languages .list-item{
+  display: flex;
+  column-gap: 10px;
+}
 
 .container.page-1 {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 hr {
@@ -136,32 +140,46 @@ hr {
   margin-top: 0;
 }
 
+.container .job-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.job-title h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.page-1 p, .page-2 p {
+  margin-left: 16px;
+}
+
 .container .title {
   text-align: center;
 }
 
-.container.page-1 h1 {
+.title-container h1 {
   font-size: 26pt;
   color: var(--blue-deep);
   font-weight: bold;
   margin-bottom: 24px;
 }
 
-.container.page-1 h2 {
+.title-container h2 {
   font-size: 16pt;
   color: var(--blue-primary);
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.container.page-1 h3 {
+.title-container h3 {
   font-size: 16pt;
   color: var(--blue-primary);
   margin-bottom: 4px;
-}
-
-.container.page-1 h3:last-of-type {
-  margin-bottom: 16px;
 }
 
 .logo-container {
@@ -184,22 +202,37 @@ img.github, .linkedin, .email, .call  {
   margin-bottom: 16px;
 }
 
-.container.page-1 h4 {
-  font-size: 13pt;
+.container ul {
+  margin-left: 32px;
+  list-style-type: square;
+  margin-top: 8px;
+}
+
+.container li {
+  margin-bottom: 8px;
+}
+
+.container li::marker {
+  color: var(--blue-primary);
+}
+
+.container h4 {
   font-weight: bold;
-  background-color: var(--blue-deep);
-  border-radius: 32px;
-  width: 65%;
-  padding: 8px 32px;
-  color: white;
-  margin-bottom: 24px;
+  margin-left: 16px;
+}
+
+.container h5 {
+  color: var(--blue-deep);
+  margin-bottom: 8px;
+  margin-left: 16px;
+  font-weight: bold;
 }
 
 .technical-skills article {
   margin-bottom: 16px;
 }
 
-.technical-skills h5, .schools h5, .languages h5 {
+.technical-skills h5, .schools h5{
   font-size: 10pt;
   font-weight: bold;
   margin-bottom: 4px;
@@ -208,44 +241,7 @@ img.github, .linkedin, .email, .call  {
   min-width: 72px;
 }
 
-.technical-skills ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.functional-skills ul, .schools ul, .languages ul {
-  padding-left: 16px;
-  list-style-type: square;
-}
-
-.functional-skills li, .schools li{
- margin-bottom: 8px;
-}
-
-.schools h5, .languages h5 {
-  float: left;
-}
-
-.schools li p {
-  float: left;
-}
-
-.languages li {
-margin-bottom: 8px;
-}
-
-.page-2 h3, .page-3 h3 {
-  font-size: 12pt;
-  font-weight: bold;
-  margin-bottom: 16px;
-  margin-left: 16px;
-  display: inline-block;
-}
-.page-2 h3:not(:last-of-type), .page-3 h3:not(:last-of-type) {
-  margin-right: 32px;
-}
-
-.page-2 article, .page-3 article {
+.container > article:not(.job-title) {
   margin-bottom: 32px;
 }
 
@@ -253,42 +249,12 @@ margin-bottom: 8px;
   margin-left: 16px;
 }
 
-.page-2 ul, .page-3 ul {
-  margin-left: 32px;
-  list-style-type: square;
-  margin-top: 8px;
-}
-
-.page-2 li {
-  margin-bottom: 8px;
-}
-
-.page-1 li::marker, .page-2 li::marker, .page-3 li::marker {
-  color: var(--blue-primary);
-}
-
-.page-2 h4, .page-3 h4 {
-  font-weight: bold;
-  margin-left: 16px;
-}
-
-.page-2 h5, .page-3 h5 {
-  color: var(--blue-deep);
-  margin-bottom: 8px;
-  margin-left: 16px;
-  font-weight: bold;
-}
-
-.page-2 .technical-environment, .page-3 .technical-environment {
+.container .technical-environment {
   color: var(--blue-light);
   margin-bottom: 4px;
 }
 
-.page-3 li {
-  margin-bottom: 8px;
-}
-
-.page-3 .list-item-wrapper {
+.list-item-wrapper {
   display: flex;
   align-items: center;
 }
@@ -302,15 +268,36 @@ margin-bottom: 8px;
   width: 24px;
   margin-right: 4px;
 }
-.page-3 h6 {
+.container h6 {
   margin-right: 8px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.hidden-section {
-  opacity: 0;
-  user-select: none;
-  z-index: -1000;
-  color: transparent;
+.page-3-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container.page-3 h4 {
+  font-size: 13pt;
+  font-weight: bold;
+  background-color: var(--blue-deep);
+  border-radius: 32px;
+  width: 65%;
+  padding: 8px 32px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.school-row {
+  display: flex;
+}
+
+footer {
+  font-style: italic;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 32px;
 }
