@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "Dossier de compétences"
+  },
   "sidebar": {
     "accessibility": {
       "decorativeSidebar": "Barre latérale décorative",
