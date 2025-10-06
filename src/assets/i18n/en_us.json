@@ -1,0 +1,279 @@
+{
+  "sidebar": {
+    "accessibility": {
+      "decorativeSidebar": "Decorative sidebar",
+      "personalInfoAndSkillsSection": "Personal information and skills"
+    },
+    "profileAlt": "Ibrahim DEMBELE",
+    "mainSkillsTitle": "Main Skills",
+    "mainSkillsList": [
+      "Junior Front-End Developer (React, Angular)",
+      "Junior Back-End Developer (Node)",
+      "Junior Full-Stack Developer",
+      "Junior QA Engineer (Quality and Automated Testing)"
+    ],
+    "keyDomainsTitle": "Key Areas of Expertise",
+    "keyDomainsList": [
+      "UI/UX Design and Optimization",
+      "API Design and Development",
+      "Automated Testing"
+    ],
+    "missionsTitle": "Reference Missions",
+    "missionsList": [
+      {
+        "date": "2023 - 2025",
+        "title": "SII - Junior Full-Stack Developer"
+      },
+      {
+        "date": "2020 - ...",
+        "title": "Personal Projects - Junior Full-Stack Developer"
+      }
+    ],
+    "languagesTitle": "Languages",
+    "languagesList": [
+      {
+        "name": "French",
+        "level": "Native / Fluent"
+      },
+      {
+        "name": "English",
+        "level": "Fluent / Professional"
+      }
+    ]
+  },
+  "page1": {
+    "name": "Ibrahim DEMBELE",
+    "title": "Junior Full-Stack Developer",
+    "professionalExperience": "2 years of professional experience",
+    "personalExperience": "5 years of practice (personal projects)",
+    "ageLabel": "years old",
+    "location": "Toulouse, Occitanie, France",
+    "logosList": [
+      {
+        "href": "https://github.com/idembele70",
+        "class": "github",
+        "src": "./assets/github.svg",
+        "title": "GitHub"
+      },
+      {
+        "href": "https://www.linkedin.com/in/ibrahim-dembele-2a91351b3/?locale=en_US",
+        "class": "linkedin",
+        "src": "./assets/linkedin.svg",
+        "title": "Linkedin"
+      },
+      {
+        "href": "mailto:idembele70@gmail.com",
+        "class": "email",
+        "src": "./assets/email.svg",
+        "title": "Email"
+      },
+      {
+        "href": "tel:0634399416",
+        "class": "call",
+        "src": "./assets/phone.svg",
+        "title": "Phone number"
+      }
+    ],
+    "siiJob": {
+      "period": "05/2023 to 09/2025",
+      "company": "SII",
+      "position": "Junior Full-Stack Developer",
+      "description": "Full-stack development (front-end and back-end) on an Angular & Node.js project. Daily collaboration with a team based in India (in English). Front-end and back-end code development and refactoring. Conducted a training session on Playwright (QA reference).",
+      "tasksSummary": "Full-stack front-end/back-end development in an Angular & Node.js project. Daily collaboration with a team based in India (in English). Front-end and back-end development and refactoring. Led a training session on Playwright (QA Lead)",
+      "tasks": [
+        "Implemented E2E tests in a dedicated repository, automatically triggered on each merge to the develop branch to prevent regressions.",
+        "Developed features and wrote their specifications.",
+        "Refactored several features, including optimizing a page displaying thousands of Excel-derived rows with partial data fetching.",
+        "Developed a secure Node.js controller allowing user deletion only in local and development environments (protecting production).",
+        "Containerized 7 application repositories using Docker Compose, enabling all services to start locally with a single click (Docker-in-Docker).",
+        "Performed code reviews and shared best practices."
+      ],
+      "clientAttentionTitle": "What can make a client notice this profile",
+      "clientAttentionsList": [
+        "Implemented a robust E2E testing strategy (CI/CD, POM, documentation).",
+        "Performance and clean code mindset (front/back optimization, refactoring).",
+        "Ability to work in an international environment (daily English).",
+        "Autonomy, proactivity, adaptability."
+      ],
+      "technicalEnvironmentTitle": "Technical Environment",
+      "technicalEnvironmentsList": [
+        "Languages: HTML, CSS, JavaScript, TypeScript, YAML, Markdown, Bash",
+        "Frameworks / Libraries: Angular, Node.js, Express.js, Prisma, Bootstrap, RxJS, Playwright",
+        "Tools: GitHub, Docker, Slack, Mattermost, Teams",
+        "Continuous Integration: GitHub Actions",
+        "Databases: MongoDB, PostgreSQL",
+        "Systems: Windows, WSL",
+        "Methodology: Agile (Scrum)"
+      ],
+      "functionalEnvironmentTitle": "Functional Environment",
+      "functionalEnvironmentsList": [
+        "Development of web interfaces for managing and visualizing large datasets (Excel-like).",
+        "Features related to user management.",
+        "Strong software quality context (testing, automation, CI/CD)."
+      ]
+    }
+  },
+  "page2": {
+    "personalWorkTitle": "Personal Projects",
+    "personalWorkPeriod": "09/2020 to Present",
+    "personalWorkPosition": "Junior Full-Stack Developer",
+    "personalWorkDescription": "Full-stack development (front and back) of various apps using React, Angular & Node.js. Front-end and back-end code development and refactoring. Implementation of automated testing.",
+    "personalWorkTasksList": [
+      "Set up front-end projects with Angular and React.",
+      "Implemented an MVC architecture for Node.js applications.",
+      "Set up E2E and unit tests automatically triggered on each merge to the main branch.",
+      "Developed features and wrote their specifications.",
+      "Migrated a React application from JavaScript to TypeScript.",
+      "Developed a REST API (CRUD).",
+      "Used Docker for containerization."
+    ],
+    "clientAttentionTitle": "What can make a client notice this profile",
+    "clientAttentionsList": [
+      "Strong knowledge of Angular, React, and Node.js.",
+      "Understanding of robust E2E testing strategies (CI/CD, POM, documentation).",
+      "Performance and clean code mindset (front/back optimization).",
+      "Autonomy, passion, adaptability."
+    ],
+    "technicalEnvironmentTitle": "Technical Environment",
+    "technicalEnvironmentsList": [
+      "Languages: HTML, CSS, Sass, JavaScript, TypeScript, YAML, Markdown, Bash",
+      "Frameworks / Libraries: Angular, Node.js, Express.js, Prisma, Bootstrap, RxJS, Playwright, Karma, Jasmine, Styled-Components, Material UI, ESLint, Prettier, Mongoose, NPM",
+      "Tools: GitHub, Docker, Slack, Mattermost, Teams, Figma, VS Code, AWS",
+      "Continuous Integration: GitHub Actions",
+      "Databases: MongoDB (NoSQL), PostgreSQL",
+      "Systems: Linux (Ubuntu), Mac",
+      "Methodology: N/A"
+    ],
+    "appsTitle": "Developed and Deployed Applications (non-exhaustive list)",
+    "appsList": [
+      {
+        "name": "Pokedex",
+        "repository": "pokedex",
+        "deployUrl": "pokedex"
+      },
+      {
+        "name": "Angular Advanced Todo App",
+        "repository": "todo-angular-seventeen",
+        "deployUrl": "todo-angular-seventeen"
+      },
+      {
+        "name": "Portfolio",
+        "repository": "portfolio",
+        "deployUrl": "portfolio"
+      },
+      {
+        "name": "Finanza",
+        "repository": "finanza",
+        "deployUrl": "finanza"
+      },
+      {
+        "name": "Growmark",
+        "repository": "growmark",
+        "deployUrl": "growmark"
+      },
+      {
+        "name": "Insure Template HTML Codex",
+        "repository": "insure-template-htmlcodex",
+        "deployUrl": "insure-template-htmlcodex"
+      },
+      {
+        "name": "Touiteur",
+        "repository": "touiteur-clone",
+        "deployUrl": ""
+      },
+      {
+        "name": "Designely",
+        "repository": "designely",
+        "deployUrl": "designely"
+      },
+      {
+        "name": "Tiny Moviez Design",
+        "repository": "tiny-moviez-design",
+        "deployUrl": "tiny-moviez-design"
+      },
+      {
+        "name": "Profile Card by Joeyline Rivera",
+        "repository": "profile-card-by-joeyline-rivera",
+        "deployUrl": "profile-card-by-joeyline-rivera"
+      },
+      {
+        "name": "Profile Card Component",
+        "repository": "profile-card-component",
+        "deployUrl": "profile-card-component"
+      },
+      {
+        "name": "Skills Portfolio",
+        "repository": "skills-portfolio",
+        "deployUrl": "skills-portfolio"
+      }
+    ]
+  },
+  "page3": {
+    "technicalSkillsTitle": "Technical Skills",
+    "languagesLibrariesFrameworksTitles": "Languages, Libraries and Frameworks",
+    "technicalSkills": {
+      "languagesFrameworksList": [
+        "HTML",
+        "CSS",
+        "JavaScript ES6+",
+        "TypeScript",
+        "Angular",
+        "React.js",
+        "Node.js",
+        "YAML",
+        "Markdown",
+        "Sass"
+      ],
+      "softwareTitle": "software",
+      "softwaresList": [
+        "Visual Studio Code"
+      ],
+      "osTitle": "Operating systems",
+      "osList": [
+        "Linux (Ubuntu)",
+        "Windows",
+        "WSL (Windows Subsystem Linux)"
+      ],
+      "methodologiesTitle": "methodologies",
+      "methodologiesList": [
+        "Agile (Scrum)"
+      ],
+      "databasesTitle": "databases",
+      "databasesList": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    "functionalSkillsTitle": "Functional Skills",
+    "functionalSkillsList": [
+      "Front-End Development",
+      "Back-End Development",
+      "Technology Migration (JavaScript to TypeScript)",
+      "End-to-End (E2E) Testing Setup",
+      "Application Deployment"
+    ],
+    "educationTitle": "Education",
+    "educationsList": [
+      {
+        "period": "2023 - 2025",
+        "degree": "Master’s Degree - ESI (Expert in Information Systems)"
+      },
+      {
+        "period": "2020 - 2021",
+        "degree": "Bachelor’s Degree - CSI (Information Systems Design)"
+      },
+      {
+        "period": "2018 - 2020",
+        "degree": "BTS SNIR (Digital Systems, Computer Science and Networks)"
+      },
+      {
+        "period": "2016 - 2018",
+        "degree": "STI2D High School Diploma (Industrial and Sustainable Development Technologies) - SIN Option"
+      }
+    ]
+  },
+  "footer": {
+    "text": "Built with Angular using Visual Studio Code (personal project)"
+  }
+}
