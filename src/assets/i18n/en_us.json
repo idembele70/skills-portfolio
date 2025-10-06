@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "Skills portfolio"
+  },
   "sidebar": {
     "accessibility": {
       "decorativeSidebar": "Decorative sidebar",
