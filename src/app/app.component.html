@@ -44,13 +44,13 @@
           <h3 class="title">{{ age }} {{'page1.ageLabel' | translate}}</h3>
           <h3 class="title">{{ 'page1.location' | translate }}</h3>
         </div>
-        <div class="logo-container">
+        <div id="contacts" class="logo-container">
           <a *ngFor="let logo of  ('page1.logosList' | translate)" [href]="logo.href">
             <img [class]="logo.class" [src]="logo.src" [alt]="logo.title" [title]="logo.title">
           </a>
         </div>
         <hr>
-        <article class="job-title">
+        <article id="experiences" class="job-title">
           <h3>{{ 'page1.siiJob.period' | translate }}</h3>
           <h3>{{ 'page1.siiJob.company' | translate }}</h3>
           <h3>{{ 'page1.siiJob.position' | translate }}</h3>
@@ -104,7 +104,7 @@
           <h5>Environnement technique</h5>
           <p *ngFor="let technicalEnvironment of ('page2.technicalEnvironmentsList' | translate)" class="technical-environment">{{ technicalEnvironment }}</p>
         </article>
-        <article>
+        <article id="projects">
           <h5>{{ 'page2.appsTitle' | translate }}</h5>
           <ul>
             <li *ngFor="let app of ('page2.appsList' | translate)">
@@ -126,7 +126,7 @@
         </article>
       </div>
     </section>
-    <section>
+    <section id="technicalSkills">
       <aside class="sidebar" [attr.aria-label]="'sidebar.accessibility.decorativeSidebar' | translate"></aside>
       <div class="container page-3">
         <hr>
