@@ -8,7 +8,7 @@
       "personalInfoAndSkillsSection": "Informations personnelles et compétences"
     },
     "profileAlt": "Ibrahim DEMBELE",
-    "certificateTitle": "Certificate",
+    "certificateTitle": "Certifications",
     "certificatesList": [
       {
         "date": "12 Octobre 2025",
@@ -175,6 +175,11 @@
         "deployUrl": "todo-angular-seventeen"
       },
       {
+        "name": "Portfolio-v2",
+        "repository": "portfolio-v2",
+        "deployUrl": "portfolio-v2?lang=fr_fr"
+      },
+      {
         "name": "Portfolio",
         "repository": "portfolio",
         "deployUrl": "portfolio"
@@ -222,7 +227,7 @@
       {
         "name": "Dossier de compétences",
         "repository": "skills-portfolio",
-        "deployUrl": "skills-portfolio"
+        "deployUrl": "skills-portfolio?lang=fr_fr"
       }
     ]
   },
