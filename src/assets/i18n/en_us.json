@@ -8,6 +8,16 @@
       "personalInfoAndSkillsSection": "Personal information and skills"
     },
     "profileAlt": "Ibrahim DEMBELE",
+    "certificateTitle": "Certificate",
+    "certificatesList": [
+      {
+        "date": "October 12, 2025",
+        "name": "Angular Junior Developer",
+        "organisation": "Certificates.dev",
+        "link": "https://certificates.dev/c/a0192c6f-6850-4bf5-958f-0fe137447118",
+        "title": "Click to view this certificate"
+      }
+    ],
     "mainSkillsTitle": "Main Skills",
     "mainSkillsList": [
       "Junior Front-End Developer (React, Angular)",
@@ -149,6 +159,11 @@
     ],
     "appsTitle": "Developed and Deployed Applications (non-exhaustive list)",
     "appsList": [
+      {
+        "name": "Ng-Todo Full-Stack",
+        "repository": "ng-todo",
+        "deployUrl": "ng-todo"
+      },
       {
         "name": "Pokedex",
         "repository": "pokedex",

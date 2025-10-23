@@ -6,6 +6,25 @@
       <aside [attr.aria-label]="'sidebar.accessibility.personalInfoAndSkillsSection' | translate" class="sidebar">
         <img src="./assets/me.png" [alt]="'sidebar.profileAlt' | translate">
         <article>
+          <h5>{{ 'sidebar.certificateTitle' | translate }}</h5>
+          <ul>
+            <li 
+            *ngFor="let certificate of 'sidebar.certificatesList' | translate"
+            class="certificate-item">
+            <a
+              [href]="certificate.link"
+              class="certificate-link"
+              target="_blank"
+              [title]="certificate.title"
+              rel="noopener noreferrer">
+              <div class="certificate-date">{{ certificate.date }}</div>
+              <div class="certificate-name">{{ certificate.name }}</div>
+              <div class="certificate-organisation">{{ certificate.organisation }}</div>
+            </a>
+            </li>
+          </ul>
+        </article>
+        <article>
           <h5>{{ 'sidebar.mainSkillsTitle' | translate}}</h5>
           <ul class="list">
             <li *ngFor="let skill of ('sidebar.mainSkillsList' | translate)" class="list-item">{{ skill }}</li>

@@ -55,6 +55,49 @@ article .list-item {
 margin-bottom: 4px;
 }
 
+.certificate-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid white;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.certificate-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.certificate-date {
+  font-size: .65rem;
+  opacity: .8;
+  margin-bottom: 8px;
+  &::before {
+    content: "📅";
+    margin-right: 8px;
+  }
+}
+
+.certificate-name {
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.certificate-organisation {
+  font-size: .75rem;
+  opacity: .9;
+
+  &::before {
+    content: "🏢";
+    margin-right: 8px;
+  }
+}
+
 article.mission-reference .list-item {
   display: flex;
 }
