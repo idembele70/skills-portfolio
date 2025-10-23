@@ -1,211 +1,223 @@
 <main>
   <section>
-      <select name="languages" id="languages" (change)="onLangChange($event)">
-        <option *ngFor="let lang of languages" [selected]="(currentLang$ | async) === lang" [value]="lang">{{ lang }}</option>
-      </select>
-      <aside [attr.aria-label]="'sidebar.accessibility.personalInfoAndSkillsSection' | translate" class="sidebar">
-        <img src="./assets/me.png" [alt]="'sidebar.profileAlt' | translate">
-        <article>
-          <h5 id="certificates">{{ 'sidebar.certificateTitle' | translate }}</h5>
-          <ul>
-            <li 
-            *ngFor="let certificate of 'sidebar.certificatesList' | translate"
-            class="certificate-item">
-            <a
-              [href]="certificate.link"
-              class="certificate-link"
-              target="_blank"
-              [title]="certificate.title"
+    <select name="languages" id="languages" (change)="onLangChange($event)">
+      <option *ngFor="let lang of languages" [selected]="(currentLang$ | async) === lang" [value]="lang">{{ lang }}
+      </option>
+    </select>
+    <aside [attr.aria-label]="'sidebar.accessibility.personalInfoAndSkillsSection' | translate" class="sidebar">
+      <img src="./assets/me.png" [alt]="'sidebar.profileAlt' | translate">
+      <article>
+        <h5 id="certificates">{{ 'sidebar.certificateTitle' | translate }}</h5>
+        <ul>
+          <li *ngFor="let certificate of 'sidebar.certificatesList' | translate" class="certificate-item">
+            <a [href]="certificate.link" class="certificate-link" target="_blank" [title]="certificate.title"
               rel="noopener noreferrer">
-              <div class="certificate-date">{{ certificate.date }}</div>
+              <div class="certificate-date">
+                 <img
+                  class="certification-item-logo"
+                  src="assets/calendar.svg"
+                  alt="calendar">
+                  {{ certificate.date }}
+              </div>
               <div class="certificate-name">{{ certificate.name }}</div>
-              <div class="certificate-organisation">{{ certificate.organisation }}</div>
+              <div class="certificate-organisation">
+                <img
+                  class="certification-item-logo"
+                  src="assets/graduation-cap.svg"
+                  alt="graduation cap">
+                {{ certificate.organisation }}
+              </div>
             </a>
             </li>
           </ul>
         </article>
         <article>
           <h5>{{ 'sidebar.mainSkillsTitle' | translate}}</h5>
-          <ul class="list">
-            <li *ngFor="let skill of ('sidebar.mainSkillsList' | translate)" class="list-item">{{ skill }}</li>
-          </ul>
-        </article>
-        <article>
-          <h5>{{ 'sidebar.keyDomainsTitle' | translate}}</h5>
-          <ul class="list">
-            <li *ngFor="let domain of ('sidebar.keyDomainsList' | translate)" class="list-item">{{ domain }}</li>
-          </ul>
-        </article>
-        <article class="mission-reference">
-          <h5>{{ 'sidebar.missionsTitle' | translate }}</h5>
-          <ul *ngFor="let mission of ('sidebar.missionsList' | translate)" class="list">
-            <li class="list-item">
-              <p class="date">{{ mission.date }}</p>
-              <span>{{ mission.title }}</span>
-            </li>
-          </ul>
-        </article>
-        <article class="languages">
-          <h5>{{ 'sidebar.languagesTitle' | translate }}</h5>
-          <ul class="list">
-            <li *ngFor="let language of ('sidebar.languagesList' | translate)" class="list-item">
-              <p>{{ language.name }}</p>
-              <span>{{ language.level }}</span>
-            </li>
-          </ul>
-        </article>
-      </aside>
-      <div class="container page-1">
-        <div class="title-container">
-          <h1 class="title">{{ 'page1.name' | translate }}</h1>
-          <h2 class="title">{{ 'page1.title' | translate }}</h2>
-          <h3 class="title">{{ 'page1.professionalExperience' | translate}}<br>{{ 'page1.personalExperience' | translate }}</h3>
-          <h3 class="title">{{ age }} {{'page1.ageLabel' | translate}}</h3>
-          <h3 class="title">{{ 'page1.location' | translate }}</h3>
-        </div>
-        <div id="contacts" class="logo-container">
-          <a *ngFor="let logo of  ('page1.logosList' | translate)" [href]="logo.href">
-            <img [class]="logo.class" [src]="logo.src" [alt]="logo.title" [title]="logo.title">
-          </a>
-        </div>
-        <hr>
-        <article id="experiences" class="job-title">
-          <h3>{{ 'page1.siiJob.period' | translate }}</h3>
-          <h3>{{ 'page1.siiJob.company' | translate }}</h3>
-          <h3>{{ 'page1.siiJob.position' | translate }}</h3>
-        </article>
-        <article>
-          <p>{{ 'page1.siiJob.tasksSummary' | translate }}</p>
-          <ul>
-            <li *ngFor="let task of ('page1.siiJob.tasks' | translate)">{{ task }}</li>
-          </ul>
-        </article>
-        <article>
-          <h4>{{ 'page1.siiJob.clientAttentionTitle' | translate }}</h4>
-          <ul>
-            <li *ngFor="let clientAttention of ('page1.siiJob.clientAttentionsList' | translate)">{{ clientAttention }}</li>
-          </ul>
-        </article>
-        <article>
-          <h5>{{ 'page1.siiJob.technicalEnvironmentTitle' | translate }}</h5>
-          <p *ngFor="let technicalEnvironment of ('page1.siiJob.technicalEnvironmentsList' | translate)" class="technical-environment">{{ technicalEnvironment }}</p>
-        </article>
-        <article>
-          <h5>{{ 'page1.siiJob.functionalEnvironmentTitle' | translate }}</h5>
-          <ul>
-            <li *ngFor="let functionalEnvironment of ('page1.siiJob.functionalEnvironmentsList' | translate)">{{ functionalEnvironment }}</li>
-          </ul>
-        </article>
+          <ul class=" list">
+          <li *ngFor="let skill of ('sidebar.mainSkillsList' | translate)" class="list-item">{{ skill }}</li>
+        </ul>
+      </article>
+      <article>
+        <h5>{{ 'sidebar.keyDomainsTitle' | translate}}</h5>
+        <ul class="list">
+          <li *ngFor="let domain of ('sidebar.keyDomainsList' | translate)" class="list-item">{{ domain }}</li>
+        </ul>
+      </article>
+      <article class="mission-reference">
+        <h5>{{ 'sidebar.missionsTitle' | translate }}</h5>
+        <ul *ngFor="let mission of ('sidebar.missionsList' | translate)" class="list">
+          <li class="list-item">
+            <p class="date">{{ mission.date }}</p>
+            <span>{{ mission.title }}</span>
+          </li>
+        </ul>
+      </article>
+      <article class="languages">
+        <h5>{{ 'sidebar.languagesTitle' | translate }}</h5>
+        <ul class="list">
+          <li *ngFor="let language of ('sidebar.languagesList' | translate)" class="list-item">
+            <p>{{ language.name }}</p>
+            <span>{{ language.level }}</span>
+          </li>
+        </ul>
+      </article>
+    </aside>
+    <div class="container page-1">
+      <div class="title-container">
+        <h1 class="title">{{ 'page1.name' | translate }}</h1>
+        <h2 class="title">{{ 'page1.title' | translate }}</h2>
+        <h3 class="title">{{ 'page1.professionalExperience' | translate}}<br>{{ 'page1.personalExperience' | translate
+          }}</h3>
+        <h3 class="title">{{ age }} {{'page1.ageLabel' | translate}}</h3>
+        <h3 class="title">{{ 'page1.location' | translate }}</h3>
       </div>
-    </section>
-    <section>
-      <aside class="sidebar" [attr.aria-label]="'sidebar.accessibility.decorativeSidebar' | translate"></aside>
-      <div class="container page-2">
-        <hr>
-        <div class="job-title">
-          <h3>{{ 'page2.personalWorkPeriod' | translate }}</h3>
-          <h3>{{ 'page2.personalWorkTitle' | translate }}</h3>
-          <h3>{{ 'page2.personalWorkPosition' | translate }}</h3>
-        </div>
-        <article>
-          <p>{{ 'page2.personalWorkDescription' | translate }}</p>
-          <ul>
-            <li *ngFor="let task of ('page2.personalWorkTasksList' | translate)">{{ task }}</li>
-          </ul>
-        </article>
-        <article>
-          <h4>{{ 'page2.clientAttentionTitle' | translate }}</h4>
-          <ul>
-            <li *ngFor="let clientAttention of ('page2.clientAttentionsList' | translate)">{{ clientAttention }}</li>
-          </ul>
-        </article>
-        <article>
-          <h5>Environnement technique</h5>
-          <p *ngFor="let technicalEnvironment of ('page2.technicalEnvironmentsList' | translate)" class="technical-environment">{{ technicalEnvironment }}</p>
-        </article>
-        <article id="projects">
-          <h5>{{ 'page2.appsTitle' | translate }}</h5>
-          <ul>
-            <li *ngFor="let app of ('page2.appsList' | translate)">
-              <div class="list-item-wrapper">
-                <h6>{{ app.name }}</h6>
-                <span class="image-container">
-                  <a [href]="app.repository | repoUrl" target="_blank" rel="noopener noreferrer">
-                    <img class="github-small" src="./assets/github.png" alt="GitHub">
-                  </a>
-                  <a appDeployUrl [deployUrl]="app.deployUrl">
-                    <img 
-                      [src]="app.deployUrl | srcUrl"
-                      [alt]="app.deployUrl | altText">
-                  </a>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </article>
+      <div id="contacts" class="logo-container">
+        <a *ngFor="let logo of  ('page1.logosList' | translate)" [href]="logo.href">
+          <img [class]="logo.class" [src]="logo.src" [alt]="logo.title" [title]="logo.title">
+        </a>
       </div>
-    </section>
-    <section id="technicalSkills">
-      <aside class="sidebar" [attr.aria-label]="'sidebar.accessibility.decorativeSidebar' | translate"></aside>
-      <div class="container page-3">
-        <hr>
-          <div class="technical-skills">
-            <h4>{{ 'page3.technicalSkillsTitle' | translate }}</h4>
-            <article>
-              <h5>{{ 'page3.languagesLibrariesFrameworksTitles' | translate }}</h5>
-              <ul>
-                <li *ngFor="let languageFramework of ('page3.technicalSkills.languagesFrameworksList' | translate)">{{ languageFramework }}</li>
-              </ul>
-            </article>
-            <article>
-              <h5>{{ 'page3.technicalSkills.softwareTitle' | translate }}</h5>
-              <ul>
-                <li *ngFor="let software of ('page3.technicalSkills.softwaresList' | translate)">{{ software }}</li>
-              </ul>
-            </article>
-            <article>
-              <h5>{{ 'page3.technicalSkills.osTitle' | translate }}</h5>
-              <ul>
-                <li *ngFor="let os of ('page3.technicalSkills.osList' | translate)">{{ os }}</li>
-              </ul>
-            </article>
-            <article>
-              <h5>{{ 'page3.technicalSkills.methodologiesTitle' | translate }}</h5>
-              <ul>
-                <li *ngFor="let methodology of ('page3.technicalSkills.methodologiesList' | translate )">{{ methodology }}</li>
-              </ul>
-            </article>
-            <article>
-              <h5>{{ 'page3.technicalSkills.databasesTitle' | translate }}</h5>
-              <ul>
-                <li *ngFor="let database of ('page3.technicalSkills.databasesList' | translate)"> {{ database }}</li>
-              </ul>
-            </article>
-          </div>
-          <div class="functional-skills">
-            <h4>{{ 'page3.functionalSkillsTitle' | translate }}</h4>
-            <article>
-              <ul>
-                <li *ngFor="let functionalSkill of ('page3.functionalSkillsList' | translate)">{{ functionalSkill }}</li>
-              </ul>
-            </article>
-            <div class="schools">
-              <h4>{{ 'page3.educationTitle' | translate }}</h4>
-              <article>
-                <ul>
-                  <li *ngFor="let education of ('page3.educationsList' | translate)">
-                    <div class="school-row">
-                      <h5>{{ education.period}}</h5>
-                      <span>{{ education.degree}}</span>
-                    </div>
-                  </li>
-                </ul>
-              </article>
+      <hr>
+      <article id="experiences" class="job-title">
+        <h3>{{ 'page1.siiJob.period' | translate }}</h3>
+        <h3>{{ 'page1.siiJob.company' | translate }}</h3>
+        <h3>{{ 'page1.siiJob.position' | translate }}</h3>
+      </article>
+      <article>
+        <p>{{ 'page1.siiJob.tasksSummary' | translate }}</p>
+        <ul>
+          <li *ngFor="let task of ('page1.siiJob.tasks' | translate)">{{ task }}</li>
+        </ul>
+      </article>
+      <article>
+        <h4>{{ 'page1.siiJob.clientAttentionTitle' | translate }}</h4>
+        <ul>
+          <li *ngFor="let clientAttention of ('page1.siiJob.clientAttentionsList' | translate)">{{ clientAttention }}
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h5>{{ 'page1.siiJob.technicalEnvironmentTitle' | translate }}</h5>
+        <p *ngFor="let technicalEnvironment of ('page1.siiJob.technicalEnvironmentsList' | translate)"
+          class="technical-environment">{{ technicalEnvironment }}</p>
+      </article>
+      <article>
+        <h5>{{ 'page1.siiJob.functionalEnvironmentTitle' | translate }}</h5>
+        <ul>
+          <li *ngFor="let functionalEnvironment of ('page1.siiJob.functionalEnvironmentsList' | translate)">{{
+            functionalEnvironment }}</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <section>
+    <aside class="sidebar" [attr.aria-label]="'sidebar.accessibility.decorativeSidebar' | translate"></aside>
+    <div class="container page-2">
+      <hr>
+      <div class="job-title">
+        <h3>{{ 'page2.personalWorkPeriod' | translate }}</h3>
+        <h3>{{ 'page2.personalWorkTitle' | translate }}</h3>
+        <h3>{{ 'page2.personalWorkPosition' | translate }}</h3>
+      </div>
+      <article>
+        <p>{{ 'page2.personalWorkDescription' | translate }}</p>
+        <ul>
+          <li *ngFor="let task of ('page2.personalWorkTasksList' | translate)">{{ task }}</li>
+        </ul>
+      </article>
+      <article>
+        <h4>{{ 'page2.clientAttentionTitle' | translate }}</h4>
+        <ul>
+          <li *ngFor="let clientAttention of ('page2.clientAttentionsList' | translate)">{{ clientAttention }}</li>
+        </ul>
+      </article>
+      <article>
+        <h5>Environnement technique</h5>
+        <p *ngFor="let technicalEnvironment of ('page2.technicalEnvironmentsList' | translate)"
+          class="technical-environment">{{ technicalEnvironment }}</p>
+      </article>
+      <article id="projects">
+        <h5>{{ 'page2.appsTitle' | translate }}</h5>
+        <ul>
+          <li *ngFor="let app of ('page2.appsList' | translate)">
+            <div class="list-item-wrapper">
+              <h6>{{ app.name }}</h6>
+              <span class="image-container">
+                <a [href]="app.repository | repoUrl" target="_blank" rel="noopener noreferrer">
+                  <img class="github-small" src="./assets/github.png" alt="GitHub">
+                </a>
+                <a appDeployUrl [deployUrl]="app.deployUrl">
+                  <img [src]="app.deployUrl | srcUrl" [alt]="app.deployUrl | altText">
+                </a>
+              </span>
             </div>
-          </div>
-          <footer>
-           {{ 'footer.text' | translate}}
-          </footer>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <section id="technicalSkills">
+    <aside class="sidebar" [attr.aria-label]="'sidebar.accessibility.decorativeSidebar' | translate"></aside>
+    <div class="container page-3">
+      <hr>
+      <div class="technical-skills">
+        <h4>{{ 'page3.technicalSkillsTitle' | translate }}</h4>
+        <article>
+          <h5>{{ 'page3.languagesLibrariesFrameworksTitles' | translate }}</h5>
+          <ul>
+            <li *ngFor="let languageFramework of ('page3.technicalSkills.languagesFrameworksList' | translate)">{{
+              languageFramework }}</li>
+          </ul>
+        </article>
+        <article>
+          <h5>{{ 'page3.technicalSkills.softwareTitle' | translate }}</h5>
+          <ul>
+            <li *ngFor="let software of ('page3.technicalSkills.softwaresList' | translate)">{{ software }}</li>
+          </ul>
+        </article>
+        <article>
+          <h5>{{ 'page3.technicalSkills.osTitle' | translate }}</h5>
+          <ul>
+            <li *ngFor="let os of ('page3.technicalSkills.osList' | translate)">{{ os }}</li>
+          </ul>
+        </article>
+        <article>
+          <h5>{{ 'page3.technicalSkills.methodologiesTitle' | translate }}</h5>
+          <ul>
+            <li *ngFor="let methodology of ('page3.technicalSkills.methodologiesList' | translate )">{{ methodology }}
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h5>{{ 'page3.technicalSkills.databasesTitle' | translate }}</h5>
+          <ul>
+            <li *ngFor="let database of ('page3.technicalSkills.databasesList' | translate)"> {{ database }}</li>
+          </ul>
+        </article>
+      </div>
+      <div class="functional-skills">
+        <h4>{{ 'page3.functionalSkillsTitle' | translate }}</h4>
+        <article>
+          <ul>
+            <li *ngFor="let functionalSkill of ('page3.functionalSkillsList' | translate)">{{ functionalSkill }}</li>
+          </ul>
+        </article>
+        <div class="schools">
+          <h4>{{ 'page3.educationTitle' | translate }}</h4>
+          <article>
+            <ul>
+              <li *ngFor="let education of ('page3.educationsList' | translate)">
+                <div class="school-row">
+                  <h5>{{ education.period}}</h5>
+                  <span>{{ education.degree}}</span>
+                </div>
+              </li>
+            </ul>
+          </article>
         </div>
-    </section>
-  </main>
+      </div>
+      <footer>
+        {{ 'footer.text' | translate}}
+      </footer>
+    </div>
+  </section>
+</main>

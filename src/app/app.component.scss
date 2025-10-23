@@ -35,7 +35,7 @@ div.container {
   font-style: italic;
 }
 
-aside img {
+aside img:not(.certification-item-logo) {
   width: 100%;
   margin: 60px auto 60px;
   display: block;
@@ -76,9 +76,11 @@ margin-bottom: 4px;
   font-size: .65rem;
   opacity: .8;
   margin-bottom: 8px;
-  &::before {
-    content: "📅";
-    margin-right: 8px;
+  display: flex;
+  align-items: flex-end;
+
+  & img {
+    margin-right: 4px;
   }
 }
 
@@ -91,10 +93,11 @@ margin-bottom: 4px;
 .certificate-organisation {
   font-size: .75rem;
   opacity: .9;
+  display: flex;
+  align-items: center;
 
-  &::before {
-    content: "🏢";
-    margin-right: 8px;
+  & img {
+    margin-right: 4px;
   }
 }
 
