@@ -1,12 +1,12 @@
 <main>
   <section>
-      <select name="s" id="languages" (change)="onLangChange($event)">
+      <select name="languages" id="languages" (change)="onLangChange($event)">
         <option *ngFor="let lang of languages" [selected]="(currentLang$ | async) === lang" [value]="lang">{{ lang }}</option>
       </select>
       <aside [attr.aria-label]="'sidebar.accessibility.personalInfoAndSkillsSection' | translate" class="sidebar">
         <img src="./assets/me.png" [alt]="'sidebar.profileAlt' | translate">
         <article>
-          <h5>{{ 'sidebar.certificateTitle' | translate }}</h5>
+          <h5 id="certificates">{{ 'sidebar.certificateTitle' | translate }}</h5>
           <ul>
             <li 
             *ngFor="let certificate of 'sidebar.certificatesList' | translate"
