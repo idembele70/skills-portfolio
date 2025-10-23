@@ -162,7 +162,7 @@
       {
         "name": "Ng-Todo Full-Stack",
         "repository": "ng-todo",
-        "deployUrl": "ng-todo"
+        "deployUrl": "ng-todo?lang=FR_fr"
       },
       {
         "name": "Pokedex",
