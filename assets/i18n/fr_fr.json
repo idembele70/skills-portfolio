@@ -11,6 +11,13 @@
     "certificateTitle": "Certifications",
     "certificatesList": [
       {
+        "date": "3 Novembre 2025",
+        "name": "Angular Mid Développeur",
+        "organisation": "Certificates.dev",
+        "link": "https://certificates.dev/c/a0443872-372e-4bee-9d71-034418b3d78b",
+        "title": "Cliquez pour consulter ce certificat"
+      },
+      {
         "date": "12 Octobre 2025",
         "name": "Angular Junior Développeur",
         "organisation": "Certificates.dev",
