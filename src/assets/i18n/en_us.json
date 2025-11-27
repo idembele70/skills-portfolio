@@ -232,11 +232,6 @@
         "deployUrl": "profile-card-by-joeyline-rivera"
       },
       {
-        "name": "Profile Card Component",
-        "repository": "profile-card-component",
-        "deployUrl": "profile-card-component"
-      },
-      {
         "name": "Skills Portfolio",
         "repository": "skills-portfolio",
         "deployUrl": "skills-portfolio?lang=en_us"
