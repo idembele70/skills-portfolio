@@ -167,6 +167,11 @@
     "appsTitle": "Developed and Deployed Applications (non-exhaustive list)",
     "appsList": [
       {
+        "name": "Ng-Pokedex Full-Stack",
+        "repository": "ng-pokedex",
+        "deployUrl": "https://vps-dc56a7e6.vps.ovh.net/ng-pokedex"
+      },
+      {
         "name": "Ng-Todo Full-Stack",
         "repository": "ng-todo",
         "deployUrl": "ng-todo?lang=EN_us"

@@ -6,25 +6,31 @@ import { AfterViewInit, Directive, ElementRef, HostListener, Input, Renderer2 } 
 })
 export class DeployUrlDirective implements AfterViewInit {
   @Input() deployUrl?: string;
-  private readonly _baseUrl = 'https://idembele70.github.io/';
 
   constructor(
     private readonly el: ElementRef,
     private readonly renderer: Renderer2) { }
+  private readonly _vpsBasUrl = 'https://vps-dc56a7e6.vps.ovh.net/';
 
   ngAfterViewInit(): void {
-      if (!this.deployUrl) {
-        this.disableLink();
-        return;
-      }
-      const href = this._baseUrl + this.deployUrl;
-      this.renderer.setAttribute(this.el.nativeElement, 'href', href);
-      this.renderer.setAttribute(this.el.nativeElement, 'target', '_blank');
-      this.renderer.setAttribute(this.el.nativeElement, 'rel', 'noopener noreferrer')
+    if (!this.deployUrl) {
+      this.disableLink();
+      return;
+    }
+    let href: string;
+    if (this.deployUrl.startsWith(this._vpsBasUrl)) {
+      href = this.deployUrl;
+    } else {
+      const githubBaseUrl = 'https://idembele70.github.io/';
+      href = githubBaseUrl + this.deployUrl;
+    }
+    this.renderer.setAttribute(this.el.nativeElement, 'href', href);
+    this.renderer.setAttribute(this.el.nativeElement, 'target', '_blank');
+    this.renderer.setAttribute(this.el.nativeElement, 'rel', 'noopener noreferrer')
   }
 
- private disableLink() {
-  this.renderer.setStyle(this.el.nativeElement, 'pointer-events', 'none');
-  this.renderer.setStyle(this.el.nativeElement, 'opacity', '0.6');
- }
+  private disableLink() {
+    this.renderer.setStyle(this.el.nativeElement, 'pointer-events', 'none');
+    this.renderer.setStyle(this.el.nativeElement, 'opacity', '0.6');
+  }
 }
